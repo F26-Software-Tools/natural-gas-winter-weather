@@ -22,11 +22,14 @@ Research question: How does natural gas consumption differ between El Niño and 
 Status: Topic selected. Instructor approval to be confirmed.
 
 ### 2. GitHub Setup and Collaboration
-We created a local Git repository and organized our project folders.
 
-We also created the required Checkpoint 1 branch.
+We published our public repository under the F26-Software-Tools course organization.
 
-Status: In progress. Online repository and team access are pending.
+We created and published the required branch, `Team_2Checkpoint_1.0`, and pushed our initial README draft.
+
+Project Team 2 now has Write access to the repository. Garrett and Yiting still need to join the team to receive this access.
+
+Status: Repository and checkpoint branch established. Teammate access setup remains in progress.
 
 ### 3. Combining Data Sources
 We plan to use two data sources:
@@ -73,16 +76,24 @@ All members will work together on data cleaning, analysis, and the final report.
 
 ## GitHub Collaboration
 
+## GitHub Collaboration
+
 **Progress:**
-- Created the local Git repository.
-- Created the Checkpoint 1 branch.
-- Established the project folder structure.
+
+- Gained access to the course GitHub organization.
+- Connected GitHub Desktop using the account associated with the class.
+- Published the project repository and Checkpoint 1 branch.
+- Committed and pushed the initial README draft.
+- Granted Project Team 2 Write access.
 
 **Challenges:**
-- Learning how to use Git and GitHub for team collaboration.
-- Accessing the course GitHub organization.
+
+- Resolving access to the course GitHub organization delayed setup.
+- We are learning how local commits, branches, and pushes work together.
 
 **Next steps:**
-- Invite teammates to collaborate.
-- Collect EIA and NOAA datasets.
-- Begin data cleaning and visualization.
+
+- Arrange GitHub team access for Garrett and Yiting.
+- Collect each member's latest files and progress updates.
+- Confirm the datasets' dates, geographic coverage, and units.
+- Organize the working files and begin data cleaning and initial visualizations.
