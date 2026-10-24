@@ -1,5 +1,5 @@
-# Open Group Project ADEC7900.Rproj first.
-# Save this script beside the merged CSV, then click Source.
+# Open Group Project ADEC7900.Rproj from the repository root first.
+# Open this script from code, then click Source.
 # Run once in the Console if needed:
 # install.packages(c("readr", "dplyr", "ggplot2"))
 
@@ -8,16 +8,16 @@ library(dplyr)
 library(ggplot2)
 
 # Read the data and shorten three column names.
-gas <- read_csv("Massachusetts_January_Combined.csv", show_col_types = FALSE) %>%
+gas <- read_csv("data/Massachusetts_January_Combined.csv", show_col_types = FALSE) %>%
   rename(Gas = Gas_usage_MMcf,
          HDD = `Jan HDD (base 65°F)`,
          ENSO = `ENSO Phase`)
 
 # Basic checks and the HDD-gas correlation.
-colSums(is.na(gas))
-sum(duplicated(gas$Year))
-table(gas$ENSO)
-cor(gas$HDD, gas$Gas)
+print(colSums(is.na(gas)))
+print(sum(duplicated(gas$Year)))
+print(table(gas$ENSO))
+print(cor(gas$HDD, gas$Gas))
 
 theme_set(theme_minimal())
 
@@ -50,10 +50,9 @@ print(p2)
 print(p3)
 
 # Save the charts in the repository's images folder.
-dir.create("../images", showWarnings = FALSE)
-ggsave("../images/01_january_gas_by_year.png", p1, width = 8, height = 5, dpi = 300)
-ggsave("../images/02_january_hdd_and_gas.png", p2, width = 8, height = 5, dpi = 300)
-ggsave("../images/03_january_gas_by_enso.png", p3, width = 8, height = 5, dpi = 300)
+dir.create("images", showWarnings = FALSE)
+ggsave("images/01_january_gas_by_year.png", p1, width = 8, height = 5, dpi = 300)
+ggsave("images/02_january_hdd_and_gas.png", p2, width = 8, height = 5, dpi = 300)
+ggsave("images/03_january_gas_by_enso.png", p3, width = 8, height = 5, dpi = 300)
 
 # Scope: January only. These charts show association, not causation.
-# Confirm the gas-use sector and units against the original EIA workbook.

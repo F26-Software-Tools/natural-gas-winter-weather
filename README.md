@@ -32,8 +32,8 @@ The video outline and final report structure document preparation for the later 
 
 | Source | Information used | Included file |
 | --- | --- | --- |
-| U.S. Energy Information Administration (EIA) | Massachusetts residential natural gas consumption, measured in million cubic feet (MMcf). | [Natural Gas EIA Data.xlsx](Group%20Project%20ADEC7900/Natural%20Gas%20EIA%20Data.xlsx) |
-| NOAA weather workbook | January average temperature, January HDD with a 65°F base, DJF RONI, and ENSO phase labels. | [NOAA_Massachusetts_January_2015_2025.xlsx](Group%20Project%20ADEC7900/NOAA_Massachusetts_January_2015_2025.xlsx) |
+| U.S. Energy Information Administration (EIA) | Massachusetts residential natural gas consumption, measured in million cubic feet (MMcf). | [Natural Gas EIA Data.xlsx](data/Natural%20Gas%20EIA%20Data.xlsx) |
+| NOAA weather workbook | January average temperature, January HDD with a 65°F base, DJF RONI, and ENSO phase labels. | [NOAA_Massachusetts_January_2015_2025.xlsx](data/NOAA_Massachusetts_January_2015_2025.xlsx) |
 
 The gas consumption values match the January 2015–2025 values in the [EIA Massachusetts residential consumption series](https://www.eia.gov/dnav/ng/hist/n3010ma2m.htm).
 
@@ -41,14 +41,14 @@ The merged dataset contains one row for each January from 2015 through 2025. ENS
 
 ### Combining and Checking the Data
 
-The [merge script](Group%20Project%20ADEC7900/MergedData.R):
+The [merge script](code/MergedData.R):
 
 1. Reads the EIA and NOAA Excel files.
 2. Selects January EIA observations from 2015 through 2025.
 3. Creates a year field and joins the EIA observations to the NOAA workbook by year.
 4. Sorts the combined data by year.
 5. Checks for 11 rows, duplicate years, and missing gas consumption values.
-6. Exports [Massachusetts_January_Combined.csv](Group%20Project%20ADEC7900/Massachusetts_January_Combined.csv).
+6. Exports [Massachusetts_January_Combined.csv](data/Massachusetts_January_Combined.csv).
 
 The merged CSV has **11 observations, no duplicate years, and no missing values in any column**. These checks assess the merged file's completeness.
 
@@ -73,7 +73,7 @@ All statistics above use the 11 observations in the merged CSV.
 
 ## Initial Visualizations and Findings
 
-The [visualization script](Group%20Project%20ADEC7900/Initial_Visualizations.R) creates the following three images.
+The [visualization script](code/Initial_Visualizations.R) creates the following three images.
 
 ### 1. January Gas Use by Year
 
@@ -130,26 +130,35 @@ Shared files appeared on `main`, which required us to check the selected branch 
 
 This process helped us understand the difference between local files, commits, branches, and pushes. Checking the branch before working and pushing completed changes made collaboration easier.
 
+## Repository Organization
+
+| Location | Contents |
+| --- | --- |
+| Main folder | `README.md` and `Group Project ADEC7900.Rproj`. |
+| `code` | Merge and visualization R scripts. |
+| `data` | The original EIA and NOAA Excel files and the merged CSV. |
+| `images` | The three chart PNG files. |
+
 ## How to Run the Analysis
 
 1. Clone or download the repository and select `Team_2Checkpoint_1.0`.
-2. Open `Group Project ADEC7900/Group Project ADEC7900.Rproj` in RStudio.
+2. Open `Group Project ADEC7900.Rproj` from the repository's main folder in RStudio.
 3. Install the packages below once if needed:
 
 ```r
 install.packages(c("readxl", "readr", "dplyr", "ggplot2"))
 ```
 
-4. Open `MergedData.R` and click **Source** to recreate the merged CSV from the Excel files.
-5. Open `Initial_Visualizations.R` and click **Source** to recreate the three charts.
-6. The image files save to the repository's `images` folder, one level above the RStudio project folder.
+4. Open `code/MergedData.R` and click **Source** to recreate the merged CSV from the Excel files.
+5. Open `code/Initial_Visualizations.R` and click **Source** to recreate the three charts.
+6. The image files save to the repository's `images` folder, beside the RStudio project file.
 7. Run the following code in the RStudio Console to reproduce the summary statistics:
 
 ```r
 library(readr)
 library(dplyr)
 
-gas <- read_csv("Massachusetts_January_Combined.csv", show_col_types = FALSE) %>%
+gas <- read_csv("data/Massachusetts_January_Combined.csv", show_col_types = FALSE) %>%
   rename(Gas = Gas_usage_MMcf,
          HDD = `Jan HDD (base 65°F)`,
          ENSO = `ENSO Phase`)

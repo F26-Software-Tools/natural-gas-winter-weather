@@ -1,3 +1,4 @@
+# Open Group Project ADEC7900.Rproj from the repository root first.
 # Run once if needed:
 install.packages(c("readxl", "dplyr","readr"))
 
@@ -6,14 +7,14 @@ library(dplyr)
 
 # Select NOAA_Massachusetts_January_2015_2025.xlsx
 noaa <- read_excel(
-  "NOAA_Massachusetts_January_2015_2025.xlsx",
+  "data/NOAA_Massachusetts_January_2015_2025.xlsx",
   sheet = "NOAA Combined Data",
   skip = 4
 )
 
 # Select Natural Gas EIA Data.xlsx
 gas <- read_excel(
-  "Natural Gas EIA Data.xlsx",
+  "data/Natural Gas EIA Data.xlsx",
   sheet = "Data 1",
   skip = 2
 )
@@ -49,7 +50,7 @@ View(combined)
 # Export a CSV that opens in Excel
 readr::write_excel_csv(
   combined,
-  "Massachusetts_January_Combined.csv"
+  "data/Massachusetts_January_Combined.csv"
 )
 
 # Show where the CSV was saved
