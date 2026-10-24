@@ -1,0 +1,12 @@
+﻿"Year","Month","State","Avg Temp (°F)","Jan HDD (base 65°F)","DJF RONI","ENSO Phase","Gas_usage_MMcf"
+2015,"January","Massachusetts",21.8,1294,0.5,"El Niño",26072
+2016,"January","Massachusetts",28.5,1097,2.1,"El Niño",19399
+2017,"January","Massachusetts",31.5,1005,-0.6,"La Niña",19515
+2018,"January","Massachusetts",24.5,1217,-1.1,"La Niña",25559
+2019,"January","Massachusetts",25.9,1170,0.7,"El Niño",25429
+2020,"January","Massachusetts",32,989,0.1,"Neutral",20390
+2021,"January","Massachusetts",28.8,1084,-1.3,"La Niña",22585
+2022,"January","Massachusetts",23.5,1243,-1.2,"La Niña",26339
+2023,"January","Massachusetts",35.3,891,-0.9,"La Niña",18905
+2024,"January","Massachusetts",30.1,1056,1.1,"El Niño",21129
+2025,"January","Massachusetts",24.7,1213,-1.1,"La Niña",25732
