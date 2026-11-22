@@ -93,6 +93,38 @@ Higher HDD values generally go with higher gas consumption. The correlation is a
 
 Average gas consumption is similar for El Niño and La Niña years, and the individual observations overlap. This sample does not show a clear separation between these two groups. Only one Neutral year is available.
 
+
+### 4. NOAA Weather Analysis — Checkpoint 2
+
+For Checkpoint 2, we added a new analysis of January weather and residential natural gas consumption in Massachusetts from 2015 to 2025. The dataset includes 11 January observations.
+
+**Weather Data Summary**
+
+The average January temperature was 27.9°F, ranging from 21.8°F to 35.3°F. The average January heating degree days (HDD) was approximately 1,114.5.
+
+**Temperature and Natural Gas Consumption**
+
+We found a strong negative correlation between January average temperature and residential natural gas consumption (r = -0.917). This suggests that colder January temperatures were generally associated with higher gas consumption.
+
+HDD and gas consumption showed a strong positive correlation (r = 0.915). Higher HDD values were generally associated with higher gas consumption.
+
+**New Visualization**
+
+![January Temperature and Residential Gas Use](images/04_january_temperature_vs_gas.png)
+
+The scatter plot shows that gas consumption generally decreases as January temperature increases.
+
+**Limitations**
+
+The analysis only includes 11 January observations from Massachusetts. These relationships are descriptive and do not prove causation.
+
+**Supporting Files**
+
+- [NOAA Analysis R Script](code/NOAA_Checkpoint2_Analysis.R)
+- [NOAA Weather Summary](outputs/noaa_weather_summary.csv)
+- [NOAA ENSO Summary](outputs/noaa_weather_by_enso.csv)
+- [NOAA Data Documentation](NOAA_Checkpoint2_Data_Documentation.md)
+
 ## Scope and Limitations
 
 - The analysis covers Massachusetts residential gas consumption in January.
