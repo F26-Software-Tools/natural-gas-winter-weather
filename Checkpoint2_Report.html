@@ -376,7 +376,9 @@ Analytics</a></li>
 Contributions</a></li>
 <li><a href="#github-collaboration" id="toc-github-collaboration">GitHub
 Collaboration</a></li>
+<li><a href="#repository-organization" id="toc-repository-organization">Repository Organization</a></li>
 <li><a href="#how-to-run-the-analysis" id="toc-how-to-run-the-analysis">How to Run the Analysis</a></li>
+<li><a href="#video-presentation-outline" id="toc-video-presentation-outline">Video Presentation Outline</a></li>
 <li><a href="#final-markdown-report-structure" id="toc-final-markdown-report-structure">Final Markdown Report
 Structure</a></li>
 </ul>
@@ -829,6 +831,17 @@ confidence intervals</a></li>
 values</a></li>
 </ul>
 </div>
+<div id="using-r-advantages-and-challenges" class="section level3">
+<h3>Using R: Advantages and Challenges</h3>
+<p>R allowed us to merge datasets, calculate statistics, fit regression
+models, and export charts through scripts that teammates can rerun.</p>
+<p>Challenges included coordinating file paths, keeping the ENSO
+reference category consistent, and exporting regression results
+correctly. Restarting R exposed an undefined object in the original
+export code. We fixed this by explicitly creating the results table.
+Using relative paths from the project root helps teammates run the same
+scripts.</p>
+</div>
 </div>
 <div id="scope-and-limitations" class="section level2">
 <h2>Scope and Limitations</h2>
@@ -942,7 +955,11 @@ the latest changes before editing shared files and confirm that we are
 working on the correct branch.</p>
 <p>Before submission, we will review the integrated report, check that
 the chart images display on GitHub, and confirm that the run
-instructions reproduce the analysis. ## Repository Organization</p>
+instructions reproduce the analysis.</p>
+</div>
+</div>
+<div id="repository-organization" class="section level2">
+<h2>Repository Organization</h2>
 <table>
 <colgroup>
 <col width="50%" />
@@ -981,7 +998,6 @@ fitted values.</td>
 </tbody>
 </table>
 </div>
-</div>
 <div id="how-to-run-the-analysis" class="section level2">
 <h2>How to Run the Analysis</h2>
 <ol style="list-style-type: decimal">
@@ -1018,8 +1034,10 @@ gas-use statistics:</li>
   )</code></pre>
 <p>All inputs needed to rerun the current analysis are included in the
 repository. Charts save to <code>images</code>. Statistical results save
-to <code>data</code> and <code>outputs</code>. ## Video Presentation
-Outline</p>
+to <code>data</code> and <code>outputs</code>.</p>
+</div>
+<div id="video-presentation-outline" class="section level2">
+<h2>Video Presentation Outline</h2>
 <p>The five-minute presentation is structured as follows:</p>
 <ul>
 <li><strong>Minute 1:</strong> Business context, decision maker, and
