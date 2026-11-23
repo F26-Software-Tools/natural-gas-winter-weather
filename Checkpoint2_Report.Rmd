@@ -1,0 +1,36 @@
+---
+title: "Natural Gas Consumption and Winter Weather"
+subtitle: "Checkpoint 2"
+author: "Anh Bui, Garrett Barnachez, and Yiting Pei"
+date: "2026-11-23"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE
+)
+
+# Recreate charts and statistical outputs using the merged CSV
+source("code/Initial_Visualizations.R", local = TRUE)
+source("code/NOAA_Checkpoint2_Analysis.R", local = TRUE)
+source("code/Statistical_Analysis.R", local = TRUE)
+source("code/Checkpoint2_Visualizations.R", local = TRUE)
+```
+
+```{r report, results='asis'}
+# Use the README as the report narrative
+report_text <- readLines(
+  "README.md",
+  encoding = "UTF-8",
+  warn = FALSE
+)
+
+# Skip the README title because the title appears above
+cat(report_text[-1], sep = "\n")
+```
