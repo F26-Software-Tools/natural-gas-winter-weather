@@ -1,4 +1,4 @@
-install.packages(c("readr", "dplyr", "ggplot2"))# NOAA Weather Analysis — ADEC 7900 Group 2, Checkpoint 2
+# NOAA Weather Analysis — ADEC 7900 Group 2, Checkpoint 2
 # Author: Yiting Pei
 # Run from the repository root (open Group Project ADEC7900.Rproj first).
 # Requires the existing Checkpoint 1 merged CSV; does not overwrite prior charts.
